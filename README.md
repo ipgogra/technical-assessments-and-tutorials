@@ -1,1 +1,0 @@
-# technical-assessments-and-tutorials

@@ -1,0 +1,74 @@
+	<!-- Original w/ Errors:
+<html>
+    <head>
+    	<title>Greatest Tabloid Headlines</title>
+    </head>
+    <body>
+    	
+		
+		Hint: The first two items in this list are formatted correctly. List from <a href="http://nymag.com/nymetro/news/anniversary/35th/n_8568/"><em>New York</em> magazine</a>.)
+		
+ 
+		<h2>Greatest Tabloid Headlines</h2>    
+		<p>
+		    <strong>FORD TO CITY: DROP DEAD</strong> (<em>Daily News</em>, 1975)
+		</p>
+		<p>
+		    <strong>KISS YOUR ASTEROID GOODBYE!</strong> (Meteor misses earth; <em>Post</em>, 1998)
+		</p>
+		<p>
+        (Error here: starting with 'ss' which is incorrect...should be: 
+         <strong>SOMOZA SLAIN BY BAZOOKA</strong> (<em>News</em>, 1980))
+		    <sstrong>SOMOZA SLAIN BY BAZOOKA</strong> (<em>News</em>, 1980)    
+		</p>
+		<p>
+        (Error here: end emphasis tag (</em>) doesn't have a '/' and  the end anchor tag(</a>) is missing...
+        should be something like: <strong><a href="www.capitalnewyork.com/article/media/2012/01/5137028/real-story-headless-body-topless-bar-argued-veterans-post">HEADLESS BODY IN TOPLESS BAR</a></strong> (<em>New York Post</em>, 1982))
+		    <strong><a href="www.capitalnewyork.com/article/media/2012/01/5137028/real-story-headless-body-topless-bar-argued-veterans-post">HEADLESS BODY IN TOPLESS BAR</strong> (<em>New York Post<em>, 1982)
+		</p>
+		<p>
+        (Error here: end strong tag(</strong>) is missing...should be: 
+        <strong>‘I AM DEATH WISH VIGILANTE’</strong> (Bernie Goetz turns himself in; <em>Post</em>, 1985))
+		    <strong>‘I AM DEATH WISH VIGILANTE’ (Bernie Goetz turns himself in; <em>Post</em>, 1985)
+		</p>
+    </body>
+</html>
+-->
+
+<!-- Fixed:
+    Specificity, in CSS, is if there are two or more conflicting rules that point to the same 
+    element. The browser itself follows rules in order to determine which of those rules is the most
+    specific. It's essentially a sort of score or a rank that simply determines which style declarations
+    are to applied to an element. For instance, if we wanted to color the specific anchor tag element, within the strong tag,
+    we can directly use 'a' in CSS to color it in. But, this will apoly it to ALL anchor tage in the HTML docs. 
+    So, to make it apply ONLY to a specific element, we instead use 'strong a' because it is more specific than just 'a' in CSS syntax.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Greatest Tabloid Headlines</title>
+    </head>
+    <body>
+    	
+		<!-- 
+		Hint: The first two items in this list are formatted correctly. List from <a href="http://nymag.com/nymetro/news/anniversary/35th/n_8568/"><em>New York</em> magazine</a>.)
+		-->
+
+		<h2>Greatest Tabloid Headlines</h2>    
+		<p>
+		    <strong>FORD TO CITY: DROP DEAD</strong> (<em>Daily News</em>, 1975)
+		</p>
+		<p>
+		    <strong>KISS YOUR ASTEROID GOODBYE!</strong> (Meteor misses earth; <em>Post</em>, 1998)
+		</p>
+		<p>
+		    <strong>SOMOZA SLAIN BY BAZOOKA</strong> (<em>News</em>, 1980)    
+		</p>
+		<p>
+		    <a href="www.capitalnewyork.com/article/media/2012/01/5137028/real-story-headless-body-topless-bar-argued-veterans-post"><strong>HEADLESS BODY IN TOPLESS BAR</strong></a> (<em>New York Post</em>, 1982)
+		</p>
+		<p>
+		    <strong>‘I AM DEATH WISH VIGILANTE’ </strong>(Bernie Goetz turns himself in; <em>Post</em>, 1985)
+		</p>
+    </body>
+</html>
