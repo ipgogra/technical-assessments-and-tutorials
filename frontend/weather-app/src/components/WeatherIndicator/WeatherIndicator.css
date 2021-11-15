@@ -1,0 +1,12 @@
+.indicator {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  align-items: center;
+  color: gray;
+  font-weight: 500
+}
+
+.today {
+  background-color: var(--color-active);
+}

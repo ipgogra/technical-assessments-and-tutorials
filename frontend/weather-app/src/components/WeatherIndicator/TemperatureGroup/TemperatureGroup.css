@@ -1,0 +1,14 @@
+.temp-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.temp-group > * {
+  margin: 0 0 1rem;
+  font-size: var(--font-size-regular);
+}
+
+.max-temp {
+  color: var(--font-color-dark);
+}
